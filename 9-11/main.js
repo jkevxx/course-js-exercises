@@ -3,11 +3,31 @@
  */
 
 
+function numRandom() {
+  return Math.round(Math.random() * (600 - 501) + 500);
+}
+
+console.log(numRandom());
+
+// console.log(Math.random());
+// console.log(Math.random() * 10);
+// console.log(Math.round(Math.random() * 10));
 
 /**
  * 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
  */
 
+function validateCap(num) {
+  console.log(num)
+  if (num === undefined) console.log('this variable is undefined')
+
+  // if (num !== '') {
+  // } else {
+  //   console.log("Need to insert a number")
+  // }
+}
+
+validateCap(3)
 
 
 /**
