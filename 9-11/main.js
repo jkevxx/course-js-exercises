@@ -18,18 +18,27 @@ console.log(numRandom());
  */
 
 function validateCap(num) {
-  console.log(num)
-  if (num === undefined) console.log('this variable is undefined')
 
-  // if (num !== '') {
-  // } else {
-  //   console.log("Need to insert a number")
-  // }
+  if (typeof (num) !== "number") return console.log("It's not a number")
+
+  let num2 = num.toString().split('').reverse().join('');
+  // console.log(num)
+
+  num === parseInt(num2) ? console.log("it's a Capicua") : console.log("it's not a Capicua");
+
 }
 
-validateCap(3)
+validateCap(2002)
 
 
 /**
  * 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
  */
+
+let num = 5
+let result = 1;
+for (let i = 1; i <= num; i++) {
+  result = result * i;
+
+  console.log(result)
+}
