@@ -10,3 +10,13 @@ function myFunction(a, b) {
 }
 
 console.log(myFunction(numbers, "b"));
+
+// delete a property of an object
+
+const pizza = {
+  ingredient: "ham york",
+  fruit: "pineapple",
+};
+
+const { fruit, ...pizzaWithoutPineapple } = pizza;
+console.log(pizzaWithoutPineapple);

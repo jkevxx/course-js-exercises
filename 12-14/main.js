@@ -28,6 +28,29 @@ const isPair = (number) => {
   }
 };
 
-isPair(29);
+// isPair(29);
 
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+const temperature = (number, signTemp) => {
+  //
+  if (typeof number !== "number" || typeof signTemp !== "string") {
+    return console.log("they're not valid parameters");
+  }
+
+  signTemp = signTemp.toLowerCase();
+
+  // console.log(signTemp);
+
+  if (signTemp === "c") {
+    let temp = number * 1.8 + 32;
+    console.log(`the temperature is ${temp} °F`);
+  } else if (signTemp === "f") {
+    let temp = (number - 32) * 0.5556;
+    console.log(`the temperature is ${temp} °C`);
+  } else {
+    console.log("sign invalid");
+  }
+};
+
+temperature(0, "c");
