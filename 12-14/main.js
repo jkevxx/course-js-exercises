@@ -1,6 +1,12 @@
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
-const primeNumber = (number) => {
+const primeNumber = (number = undefined) => {
+  // validation
+
+  if (number === undefined) return console.warn("You don't get into a value");
+  if (Math.sign(number) === -1)
+    return console.error("The number mustn't be negative");
+
   let count = 0;
   for (let i = number; i > 0; i--) {
     // console.log(number / i)
