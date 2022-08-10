@@ -43,15 +43,23 @@ const convertBinary = (number = undefined, characterBase = undefined) => {
  * 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
  */
 
-const calculateDiscount =(amount, discount)=>{
+const calculateDiscount = (amount = undefined, discount = undefined) => {
+  if (amount === undefined || discount === undefined)
+    return console.error("Empty values");
 
-}
+  if (typeof amount !== "number" || typeof discount !== "number")
+    return console.error("it must be numbers");
+
+  let finalDiscount = amount * ((100 - discount) / 100);
+
+  console.log(`Final discount: $${finalDiscount}`);
+};
+
+calculateDiscount(200, 20);
 
 /**
  * 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
  */
-
-
 
 /**
  * interview test
