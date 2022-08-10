@@ -50,16 +50,47 @@ const calculateDiscount = (amount = undefined, discount = undefined) => {
   if (typeof amount !== "number" || typeof discount !== "number")
     return console.error("it must be numbers");
 
+  if (amount === 0) return console.error("amount mustn't be zero");
+
+  if (Math.sign(discount) === -1)
+    return console.error("Discount mustn't be negative");
+
   let finalDiscount = amount * ((100 - discount) / 100);
 
   console.log(`Final discount: $${finalDiscount}`);
 };
 
-calculateDiscount(200, 20);
+// calculateDiscount(200, 20);
 
 /**
  * 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+ * Math.sign validate if there is a number positive return 1, negative return -1 or zero return 0
+ * Math.abs return a number without negative sign
  */
+
+const calculateYears = (newDate = undefined) => {
+  if (newDate === undefined) return console.warn("Empty values");
+
+  if (!(newDate instanceof Date))
+    return console.error("It isn't validate date");
+
+  let todayLessDate = new Date().getTime() - newDate.getTime();
+  let yearsInMonths = 1000 * 60 * 60 * 24 * 365;
+
+  let humanYears = Math.floor(todayLessDate / yearsInMonths);
+
+  return Math.sign(humanYears) === -1
+    ? console.info(
+        `Missing ${Math.abs(humanYears)} years to ${newDate.getFullYear()}`
+      )
+    : Math.sign(humanYears) === 1
+    ? console.info(
+        `${humanYears} years have passed since ${newDate.getFullYear()}`
+      )
+    : console.info(`Current year ${newDate.getFullYear()}`);
+};
+
+calculateYears(new Date(1996, 07, 08));
 
 /**
  * interview test
