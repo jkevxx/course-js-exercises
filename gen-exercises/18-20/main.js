@@ -1,7 +1,7 @@
 /*18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
 
 const checkWord = (word) => {
-  // word = word.trim();
+  word = word.toLowerCase();
   // console.log(word);
   let numVowels = 0;
   let numConsonants = 0;
@@ -24,7 +24,7 @@ const checkWord = (word) => {
   console.log(`Number of consonants is: ${numConsonants}`);
 };
 
-// checkWord("Hola Mundo hi");
+// checkWord("HolaA Mundo hi");
 
 /*19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.*/
 
@@ -48,4 +48,4 @@ const validateEmail = (email) => {
     : console.log("Invalid email");
 };
 
-validateEmail("kevin223@gmail.com");
+// validateEmail("kevin223@gmail.com");
