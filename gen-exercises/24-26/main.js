@@ -30,7 +30,9 @@ const deleteDuplicate = (array) => {
  */
 
 const average = (numbers) => {
-  const sumTotal = numbers.reduce((value, number) => value + number);
+  const sumTotal = numbers.reduce(
+    (previousValue, currentValue) => previousValue + currentValue
+  );
   // sumTotal/numbers.length;
   console.log(sumTotal / numbers.length);
 };
