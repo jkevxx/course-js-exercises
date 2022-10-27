@@ -27,3 +27,7 @@
 - [unshift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 - [Splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+- [Array-object](https://exercism.org/tracks/javascript/exercises/high-score-board)
+
+- [bad-practice](https://midu.dev/malas-practicas-javascript/?t=nhQz1vkqA1O-PekVdKVpsg&s=09)

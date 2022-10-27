@@ -8,3 +8,5 @@ let newArray = array;
 //newArray[0].animal = '🐱' // correct [ { animal: '🐱' }, { name: '🐵' } ]
 
 // newArray;
+
+// more info: https://exercism.org/tracks/javascript/exercises/high-score-board
