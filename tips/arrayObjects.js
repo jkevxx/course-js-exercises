@@ -10,3 +10,10 @@ let newArray = array;
 // newArray;
 
 // more info: https://exercism.org/tracks/javascript/exercises/high-score-board
+
+function options(name) {
+  const object = { adult: 1, children: 0, room: 1 };
+  console.log(object[name]);
+}
+
+options("children");
