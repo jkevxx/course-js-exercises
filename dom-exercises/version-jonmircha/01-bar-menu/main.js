@@ -2,5 +2,5 @@ import hamburgerMenu from "./hamburger_menu.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
-  hamburgerMenu(".panel-btn", ".panel");
+  hamburgerMenu(".panel-btn", ".panel", ".menu a");
 });

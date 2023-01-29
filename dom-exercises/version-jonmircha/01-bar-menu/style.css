@@ -68,7 +68,16 @@ img {
   background-color: var(--second-modal-color);
   transition: transform 0.3s ease;
   /* up */
-  transform: translate(0, -100%);
+  /* transform: translate(0, -100%); */
+
+  /* down */
+  /* transform: translate(0, 100%); */
+
+  /* right */
+  /* transform: translate(100%, 0); */
+
+  /* left */
+  transform: translate(-100%, 0);
 }
 
 .panel.is-active {
