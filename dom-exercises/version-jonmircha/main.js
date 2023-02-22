@@ -1,6 +1,6 @@
 import hamburgerMenu from "./01Hamburger_menu.js";
 import { digitalClock, alarm } from "./02ClockAlarm.js";
-import { shortcut } from "./03Keyboard.js";
+import { moveBall, shortcut } from "./03Keyboard.js";
 
 const d = document;
 
@@ -12,4 +12,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
 d.addEventListener("keydown", (e) => {
   shortcut(e);
+  moveBall(e, ".ball", ".stage");
+  // console.log("hi");
 });
