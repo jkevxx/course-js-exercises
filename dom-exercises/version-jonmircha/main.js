@@ -13,7 +13,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   alarm("assets/pikachu.mp3", "#startAlarm", "#stopAlarm");
   countdown("countdown", "May 23, 2023 03:23:00", "Happy Birthday");
   scrollTopButton(".scroll-top-btn");
-  darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", (e) => {
@@ -21,3 +20,5 @@ d.addEventListener("keydown", (e) => {
   moveBall(e, ".ball", ".stage");
   // console.log("hi");
 });
+
+darkTheme(".dark-theme-btn", "dark-mode");
