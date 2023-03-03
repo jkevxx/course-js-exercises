@@ -3,6 +3,7 @@ import { digitalClock, alarm } from "./02ClockAlarm.js";
 import { moveBall, shortcut } from "./03Keyboard.js";
 import { countdown } from "./04Countdown.js";
 import scrollTopButton from "./05ButtonScroll.js";
+import darkTheme from "./06darkTheme.js";
 
 const d = document;
 
@@ -12,6 +13,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   alarm("assets/pikachu.mp3", "#startAlarm", "#stopAlarm");
   countdown("countdown", "May 23, 2023 03:23:00", "Happy Birthday");
   scrollTopButton(".scroll-top-btn");
+  darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", (e) => {
