@@ -20,7 +20,7 @@ export default function darkTheme(btn, classDark) {
 
   document.addEventListener("click", (e) => {
     if (e.target.matches(btn)) {
-      console.log($themeBtn.textContent);
+      // console.log($themeBtn.textContent);
       if ($themeBtn.textContent === moon) {
         darkMode();
       } else {
@@ -30,7 +30,7 @@ export default function darkTheme(btn, classDark) {
   });
 
   document.addEventListener("DOMContentLoaded", (e) => {
-    console.log(localStorage.getItem("theme"));
+    // console.log(localStorage.getItem("theme"));
 
     if (localStorage.getItem("theme") === null)
       localStorage.setItem("theme", "light");
