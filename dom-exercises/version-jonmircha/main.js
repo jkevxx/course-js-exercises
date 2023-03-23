@@ -8,6 +8,7 @@ import responsiveMedia from './07responsiveObject.js';
 import responsiveTester from './08ResponsiveTester.js';
 import userDeviceInfo from './09UserDevice.js';
 import networkStatus from './10NetworkStatus.js';
+import webcam from './11Webcam.js';
 
 const d = document;
 
@@ -34,6 +35,7 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
   responsiveTester('responsive-tester');
   userDeviceInfo('user-device');
+  webcam('webcam');
 });
 
 d.addEventListener('keydown', (e) => {
