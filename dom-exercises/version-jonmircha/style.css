@@ -65,8 +65,11 @@ img {
   left: 0;
   right: 0;
   width: 100%;
+  overflow-y: auto;
   background-color: var(--second-modal-color);
   transition: transform 0.3s ease;
+  /* opacity: 0;
+  visibility: hidden; */
   /* up */
   /* transform: translate(0, -100%); */
 
