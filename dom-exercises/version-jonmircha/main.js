@@ -12,6 +12,7 @@ import webcam from './11Webcam.js';
 import getGeolocation from './12Geolocation.js';
 import searchFilters from './13SearchFilters.js';
 import draw from './14Draw.js';
+import slide from './15Slide.js';
 
 const d = document;
 
@@ -42,6 +43,7 @@ d.addEventListener('DOMContentLoaded', (e) => {
   getGeolocation('geolocation');
   searchFilters('.card-filter', '.card');
   draw('#winner-btn', '.player');
+  slide();
 });
 
 d.addEventListener('keydown', (e) => {
