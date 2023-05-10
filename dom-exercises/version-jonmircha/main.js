@@ -1,5 +1,5 @@
 import hamburgerMenu from './01Hamburger_menu.js';
-import { digitalClock, alarm } from './02ClockAlarm.js';
+import { alarm, digitalClock } from './02ClockAlarm.js';
 import { moveBall, shortcut } from './03Keyboard.js';
 import { countdown } from './04Countdown.js';
 import scrollTopButton from './05ButtonScroll.js';
