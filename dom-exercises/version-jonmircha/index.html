@@ -37,7 +37,7 @@
         <a href="#section11" data-scroll-spy>Digital Lottery</a>
         <a href="#section12" data-scroll-spy>Responsive Slider</a>
         <a href="#section13" data-scroll-spy>Smart Video</a>
-        <a href="#section14" data-scroll-spy>Section 14</a>
+        <a href="#section14" data-scroll-spy>Form Validations</a>
         <a href="#section15" data-scroll-spy>Section 15</a>
         <a href="#section16" data-scroll-spy>Section 16</a>
         <a href="#section17" data-scroll-spy>Section 17</a>
@@ -245,7 +245,20 @@
         <br />
       </section>
       <section id="section14" class="section" data-scroll-spy>
-        <h2>Section 14</h2>
+        <h2>Form Validations</h2>
+        <form class="contact-form">
+          <legend>Send your comments</legend>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Write your name"
+            title="The name only accept letters and whitespace"
+            pattern="^[A-Za-zñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
+          />
+          <input type="submit" value="Send" />
+        </form>
       </section>
       <section id="section15" class="section" data-scroll-spy>
         <h2>Section 15</h2>
