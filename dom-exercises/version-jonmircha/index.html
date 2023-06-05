@@ -257,7 +257,40 @@
             pattern="^[A-Za-zñÁáÉéÍíÓóÚúÜü\s]+$"
             required
           />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Write your email address"
+            title="The email address only accept letters and whitespace"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Write the subject"
+            title="The subject only accept letters and whitespace"
+            required
+          />
+          <textarea
+            name="comments"
+            id="comments"
+            cols="50"
+            rows="5"
+            placeholder="Write your comments"
+            data-pattern="^.{1,255}$"
+            title="Your comments must not be longer than 255 characters"
+            required
+          ></textarea>
           <input type="submit" value="Send" />
+          <div class="contact-form-loader none">
+            <img src="assets/loader.svg" alt="Loading" />
+          </div>
+          <div class="contact-form-response none">
+            <p>Data has been sent successfully</p>
+          </div>
         </form>
       </section>
       <section id="section15" class="section" data-scroll-spy>
