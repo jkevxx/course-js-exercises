@@ -15,6 +15,7 @@ import draw from './14Draw.js';
 import slide from './15Slide.js';
 import scrollSpy from './16ScrollSpy.js';
 import smartVideo from './17SmartVideo.js';
+import contactFormValidations from './18ContactFormValidation.js';
 
 const d = document;
 
@@ -48,6 +49,7 @@ d.addEventListener('DOMContentLoaded', (e) => {
   slide();
   scrollSpy();
   smartVideo();
+  contactFormValidations();
 });
 
 d.addEventListener('keydown', (e) => {
