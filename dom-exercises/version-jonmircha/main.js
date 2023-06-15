@@ -16,6 +16,7 @@ import slide from './15Slide.js';
 import scrollSpy from './16ScrollSpy.js';
 import smartVideo from './17SmartVideo.js';
 import contactFormValidations from './18ContactFormValidation.js';
+import storyteller from './19Storyteller.js';
 
 const d = document;
 
@@ -60,3 +61,4 @@ d.addEventListener('keydown', (e) => {
 
 darkTheme('.dark-theme-btn', 'dark-mode');
 networkStatus();
+storyteller();
