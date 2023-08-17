@@ -31,3 +31,9 @@
 - [Array-object](https://exercism.org/tracks/javascript/exercises/high-score-board)
 
 - [bad-practice](https://midu.dev/malas-practicas-javascript/?t=nhQz1vkqA1O-PekVdKVpsg&s=09)
+
+---
+
+## JSON-Server Command
+
+`json-server --watch --port 3004 db/db.json`
