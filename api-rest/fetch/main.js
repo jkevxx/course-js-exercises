@@ -4,6 +4,7 @@ const $title = document.querySelector('.crud-title');
 const $template = document.querySelector('.crud-template').content;
 const $fragment = document.createDocumentFragment();
 
+// Request method
 const ajax = (options) => {
   let { url, method, success, error, data } = options;
   const xhr = new XMLHttpRequest();
@@ -15,7 +16,7 @@ const ajax = (options) => {
       success(json);
     } else {
       let message = xhr.statusText || "there's an error";
-      error(`Error ${shr.status}: ${message}`);
+      error(`Error ${xhr.status}: ${message}`);
     }
   });
 
@@ -24,6 +25,7 @@ const ajax = (options) => {
   xhr.send(JSON.stringify(data));
 };
 
+// Get Info
 const getAll = () => {
   ajax({
     method: 'GET',
@@ -55,3 +57,74 @@ const getAll = () => {
 };
 
 document.addEventListener('DOMContentLoaded', getAll);
+
+// SENT Info
+document.addEventListener('submit', (e) => {
+  if (e.target === $form) {
+    e.preventDefault();
+
+    if (!e.target.id.value) {
+      // Create - POST
+      ajax({
+        url: 'http://localhost:3004/santos',
+        method: 'POST',
+        success: (res) => {
+          location.reload();
+          $form.reset();
+        },
+        error: (err) => {
+          $form.insertAdjacentHTML('afterend', `<p><b>${err}</b></p>`);
+        },
+        data: {
+          name: e.target.name.value,
+          constellation: e.target.constellation.value,
+        },
+      });
+    } else {
+      // Update - PUT
+      ajax({
+        url: `http://localhost:3004/santos/${e.target.id.value}`,
+        method: 'PUT',
+        success: (res) => {
+          location.reload();
+          $form.reset();
+        },
+        error: (err) => {
+          $form.insertAdjacentHTML('afterend', `<p><b>${err}</b></p>`);
+        },
+        data: {
+          name: e.target.name.value,
+          constellation: e.target.constellation.value,
+        },
+      });
+    }
+  }
+});
+
+// Buttons
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.edit')) {
+    $title.textContent = 'Edit Santo';
+    $form.name.value = e.target.dataset.name;
+    $form.constellation.value = e.target.dataset.constellation;
+    $form.id.value = e.target.dataset.id;
+  }
+
+  if (e.target.matches('.delete')) {
+    let isDelete = confirm(`Are you sure to delete id ${e.target.dataset.id}?`);
+    if (isDelete) {
+      // Delete - DELETE
+      ajax({
+        url: `http://localhost:3004/santos/${e.target.dataset.id}`,
+        method: 'DELETE',
+        success: (res) => {
+          location.reload();
+          $form.reset();
+        },
+        error: (err) => {
+          alert(err);
+        },
+      });
+    }
+  }
+});
