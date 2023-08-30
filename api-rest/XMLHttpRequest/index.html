@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD API REST AJAX</title>
+  </head>
+  <body>
+    <h1>CRUD API REST AJAX</h1>
+    <section class="crud">
+      <article>
+        <h2 class="crud-title">Add Santo</h2>
+        <form class="crud-form">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="name"
+            required
+          />
+          <br />
+          <input
+            type="text"
+            name="constellation"
+            id="constellation"
+            placeholder="constellation"
+            required
+          />
+          <br />
+          <input type="submit" value="Send" />
+          <input type="hidden" name="id" />
+        </form>
+      </article>
+      <article>
+        <h2>See Santos</h2>
+        <table class="crud-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Constellation</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </section>
+    <template class="crud-template">
+      <tr>
+        <td class="name">Seiya</td>
+        <td class="constellation">Pegaso</td>
+        <td>
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </td>
+      </tr>
+    </template>
+    <script src="./main.js"></script>
+  </body>
+</html>
