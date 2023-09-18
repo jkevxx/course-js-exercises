@@ -34,6 +34,16 @@
       "name": "Saga",
       "constellation": "Geminis",
       "id": 7
+    },
+    {
+      "name": "Aioria",
+      "constellation": "Leo",
+      "id": 8
+    },
+    {
+      "name": "Shaka",
+      "constellation": "Virgo",
+      "id": 9
     }
   ],
   "dioses": [

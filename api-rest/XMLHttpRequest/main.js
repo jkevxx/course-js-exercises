@@ -58,7 +58,7 @@ const getAll = () => {
 
 document.addEventListener('DOMContentLoaded', getAll);
 
-// SENT Info
+// SEND Info
 document.addEventListener('submit', (e) => {
   if (e.target === $form) {
     e.preventDefault();
