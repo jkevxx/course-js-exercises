@@ -1,3 +1,4 @@
+// Promises Way
 // (() => {
 //   const $axios = document.getElementById('axios');
 //   const $fragment = document.createDocumentFragment();
